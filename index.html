@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming App - AI Prompt Interface">
+    <title>My Upcoming App - AI Prompt Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container with Floating Windows -->
+    <div class="main-container">
+        <!-- Left Side: Terminal/Shell -->
+        <div class="terminal-panel" id="terminalWindow">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control-dot red"></span>
+                    <span class="control-dot yellow" id="terminalMinimize"></span>
+                    <span class="control-dot green"></span>
+                </div>
+                <div class="terminal-title">~/EZMoney</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">user@portfolio:~$</span>
+                    <span class="terminal-command">ls -la projects/</span>
+                </div>
+                <div class="terminal-output">
+                    <div class="file-listing">
+                        <div class="file-item dir">📁 EZMoney/</div>
+                    </div>
+                </div>
+                
+                <!-- EZMoney Project -->
+                <div class="terminal-line project-section" data-project="1">
+                    <span class="terminal-prompt">user@portfolio:~$</span>
+                    <span class="terminal-command">cat projects/EZMoney/README.md</span>
+                </div>
+                <div class="terminal-output project-info visible">
+                    <div class="project-header">
+                        <h3>💰 EZMoney</h3>
+                    </div>
+                    <p style="font-size: 1.5rem; text-align: center; padding: 40px 20px; color: #4ec9b0; font-weight: bold;">Coming Soon</p>
+                </div>
+
+                <div class="terminal-line">
+                    <span class="terminal-prompt">user@portfolio:~$</span>
+                    <span class="terminal-cursor">█</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Chat Interface -->
+        <div class="chat-panel" id="chatWindow">
+            <!-- AI Interface Header -->
+            <header class="ai-header">
+                <div class="header-content">
+                    <div class="chat-controls">
+                        <span class="control-dot red"></span>
+                        <span class="control-dot yellow" id="chatMinimize"></span>
+                        <span class="control-dot green"></span>
+                    </div>
+                    <div class="ai-logo">
+                        <div class="logo-icon">🤖</div>
+                        <span class="logo-text">App AI</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="icon-btn" id="clearChatBtn" title="Clear Chat">🗑️</button>
+                        <button class="icon-btn" title="Settings">⚙️</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Chat Container -->
+            <div class="chat-container" id="chatContainer">
+                <!-- Welcome Message -->
+                <div class="message-group welcome-message">
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hello! I'm an AI assistant for an upcoming app. You can ask me questions about the app's features, technology, release date, and more using the prompt box below, or scroll down to see answers to common questions.</p>
+                </div>
+                    </div>
+                </div>
+
+                <!-- Question 1: What is the app -->
+                <div class="message-group" data-question="1">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>What is this app about?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>About EZMoney</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2: Features -->
+                <div class="message-group" data-question="2">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>What are the key features of the app?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Key Features</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3: Technology -->
+                <div class="message-group" data-question="3">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>What technology stack is the app built with?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Technology Stack</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4: Release Date -->
+                <div class="message-group" data-question="4">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>When will the app be released?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Release Information</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5: Pricing -->
+                <div class="message-group" data-question="5">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>How much will the app cost?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Pricing Information</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6: Platform Availability -->
+                <div class="message-group" data-question="6">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>What platforms will the app be available on?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Platform Availability</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7: Contact/Updates -->
+                <div class="message-group" data-question="7">
+                    <div class="message user-message">
+                        <div class="message-avatar">👤</div>
+                        <div class="message-content">
+                            <p>How can I stay updated or get in touch?</p>
+                        </div>
+                    </div>
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p><strong>Stay Connected</strong></p>
+                            <p>TBD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Message -->
+                <div class="message-group end-message">
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p>That covers the main questions about the app! Feel free to ask anything else you'd like to know. Scroll back up to review any section.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prompt Input Area (Fixed at bottom) -->
+            <div class="prompt-container">
+                <div class="prompt-box">
+                    <div class="prompt-input-wrapper">
+                        <textarea 
+                            class="prompt-input" 
+                            id="promptInput" 
+                            placeholder="Ask me anything about the app, features, technology, or release date..."
+                            rows="1"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" title="Send">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- macOS Dock -->
+    <div class="macos-dock">
+        <div class="dock-container">
+            <div class="dock-icon" title="Finder">📁</div>
+            <div class="dock-icon" title="Safari">🌐</div>
+            <div class="dock-icon" title="Messages">💬</div>
+            <div class="dock-icon" title="Mail">✉️</div>
+            <div class="dock-icon" title="Photos">📷</div>
+            <div class="dock-icon active" id="terminalDockIcon" title="Terminal">💻</div>
+            <div class="dock-icon active" id="chatDockIcon" title="App AI">🤖</div>
+            <div class="dock-icon" title="Music">🎵</div>
+            <div class="dock-icon" title="Settings">⚙️</div>
+            <div class="dock-separator"></div>
+            <div class="dock-icon" title="Trash">🗑️</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
