@@ -3,254 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Upcoming App - AI Prompt Interface">
-    <meta name="google-site-verification" content="fqLZ4IBnd_yt3g98sna5DiR4qwLZ0V_Z-2swsjkrjhU" />
-    <title>My Upcoming App - AI Prompt Interface</title>
+    <meta name="description" content="MyNPco LLC is an indie software studio building practical digital products across web, mobile, automation, and AI-powered workflows.">
+    <title>MyNPco LLC | Indie Development Studio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Main Container with Floating Windows -->
-    <div class="main-container">
-        <!-- Left Side: Terminal/Shell -->
-        <div class="terminal-panel" id="terminalWindow">
-            <div class="terminal-header">
-                <div class="terminal-controls">
-                    <span class="control-dot red"></span>
-                    <span class="control-dot yellow" id="terminalMinimize"></span>
-                    <span class="control-dot green"></span>
-                </div>
-                <div class="terminal-title">~/EZMoney</div>
-            </div>
-            <div class="terminal-body" id="terminalBody">
-                <div class="terminal-line">
-                    <span class="terminal-prompt">user@portfolio:~$</span>
-                    <span class="terminal-command">ls -la projects/</span>
-                </div>
-                <div class="terminal-output">
-                    <div class="file-listing">
-                        <div class="file-item dir">📁 EZMoney/</div>
-                    </div>
-                </div>
-                
-                <!-- EZMoney Project -->
-                <div class="terminal-line project-section" data-project="1">
-                    <span class="terminal-prompt">user@portfolio:~$</span>
-                    <span class="terminal-command">cat projects/EZMoney/README.md</span>
-                </div>
-                <div class="terminal-output project-info visible">
-                    <div class="project-header">
-                        <h3>💰 EZMoney</h3>
-                    </div>
-                    <p style="font-size: 1.5rem; text-align: center; padding: 40px 20px; color: #4ec9b0; font-weight: bold;">Coming Soon</p>
-                </div>
-
-                <div class="terminal-line">
-                    <span class="terminal-prompt">user@portfolio:~$</span>
-                    <span class="terminal-cursor">█</span>
-                </div>
-            </div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home">MyNPco LLC</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">Menu</button>
+            <nav class="main-nav" id="mainNav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#work">Work</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Right Side: Chat Interface -->
-        <div class="chat-panel" id="chatWindow">
-            <!-- AI Interface Header -->
-            <header class="ai-header">
-                <div class="header-content">
-                    <div class="chat-controls">
-                        <span class="control-dot red"></span>
-                        <span class="control-dot yellow" id="chatMinimize"></span>
-                        <span class="control-dot green"></span>
-                    </div>
-                    <div class="ai-logo">
-                        <div class="logo-icon">🤖</div>
-                        <span class="logo-text">App AI</span>
-                    </div>
-                    <div class="header-actions">
-                        <button class="icon-btn" id="clearChatBtn" title="Clear Chat">🗑️</button>
-                        <button class="icon-btn" title="Settings">⚙️</button>
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Indie Development Studio</p>
+                    <h1>MyNPco LLC builds reliable software for growing businesses.</h1>
+                    <p class="hero-text">
+                        We design and ship practical digital products across web, mobile, integrations,
+                        automation, and AI-assisted workflows. From MVP to internal tooling, we focus
+                        on clarity, speed, and long-term maintainability.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contact">Start a Project</a>
+                        <a class="btn btn-secondary" href="#work">View Capabilities</a>
                     </div>
                 </div>
-            </header>
+                <aside class="hero-card">
+                    <h2>What We Deliver</h2>
+                    <ul>
+                        <li>Business websites and portals</li>
+                        <li>Custom web applications</li>
+                        <li>Workflow automation and integrations</li>
+                        <li>AI-enhanced internal tools</li>
+                        <li>Ongoing product support</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
 
-            <!-- Chat Container -->
-            <div class="chat-container" id="chatContainer">
-                <!-- Welcome Message -->
-                <div class="message-group welcome-message">
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                <div class="message-content">
-                    <p>Hello! I'm an AI assistant for an upcoming app. You can ask me questions about the app's features, technology, release date, and more using the prompt box below, or scroll down to see answers to common questions.</p>
-                </div>
-                    </div>
-                </div>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About MyNPco LLC</h2>
+                <p>
+                    MyNPco LLC is an independent software company focused on building useful products
+                    that solve real operational and customer-facing problems. We work across multiple
+                    domains and adapt our stack to fit the business goal, not the other way around.
+                </p>
+                <p>
+                    Our approach is lean and collaborative: define outcomes, ship in phases, and
+                    iterate quickly with real feedback. This keeps projects grounded, functional,
+                    and ready for growth.
+                </p>
+            </div>
+        </section>
 
-                <!-- Question 1: What is the app -->
-                <div class="message-group" data-question="1">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>What is this app about?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>About EZMoney</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
+        <section id="services" class="section section-alt">
+            <div class="container">
+                <h2>Services</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Product Development</h3>
+                        <p>MVPs, full-featured applications, dashboards, and internal tools.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Web & Mobile Experiences</h3>
+                        <p>Responsive websites and app frontends designed for performance and usability.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Automation & Integrations</h3>
+                        <p>Process automation, API integrations, and workflow optimization.</p>
+                    </article>
+                    <article class="card">
+                        <h3>AI-Powered Solutions</h3>
+                        <p>Practical AI features for support, search, content operations, and internal productivity.</p>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Question 2: Features -->
-                <div class="message-group" data-question="2">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>What are the key features of the app?</p>
-                        </div>
+        <section id="work" class="section">
+            <div class="container">
+                <h2>Focus Areas</h2>
+                <div class="grid-2">
+                    <div class="panel">
+                        <h3>Industries</h3>
+                        <ul>
+                            <li>Small business operations</li>
+                            <li>Service-based companies</li>
+                            <li>Content and creator workflows</li>
+                            <li>Startup validation and launch</li>
+                        </ul>
                     </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Key Features</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 3: Technology -->
-                <div class="message-group" data-question="3">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>What technology stack is the app built with?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Technology Stack</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 4: Release Date -->
-                <div class="message-group" data-question="4">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>When will the app be released?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Release Information</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 5: Pricing -->
-                <div class="message-group" data-question="5">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>How much will the app cost?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Pricing Information</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 6: Platform Availability -->
-                <div class="message-group" data-question="6">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>What platforms will the app be available on?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Platform Availability</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 7: Contact/Updates -->
-                <div class="message-group" data-question="7">
-                    <div class="message user-message">
-                        <div class="message-avatar">👤</div>
-                        <div class="message-content">
-                            <p>How can I stay updated or get in touch?</p>
-                        </div>
-                    </div>
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p><strong>Stay Connected</strong></p>
-                            <p>TBD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- End Message -->
-                <div class="message-group end-message">
-                    <div class="message ai-message">
-                        <div class="message-avatar">🤖</div>
-                        <div class="message-content">
-                            <p>That covers the main questions about the app! Feel free to ask anything else you'd like to know. Scroll back up to review any section.</p>
-                        </div>
+                    <div class="panel">
+                        <h3>Technical Scope</h3>
+                        <ul>
+                            <li>Frontend, backend, and APIs</li>
+                            <li>Data modeling and reporting</li>
+                            <li>Deployment and reliability</li>
+                            <li>Security and maintainability best practices</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Prompt Input Area (Fixed at bottom) -->
-            <div class="prompt-container">
-                <div class="prompt-box">
-                    <div class="prompt-input-wrapper">
-                        <textarea 
-                            class="prompt-input" 
-                            id="promptInput" 
-                            placeholder="Ask me anything about the app, features, technology, or release date..."
-                            rows="1"
-                        ></textarea>
-                        <button class="send-btn" id="sendBtn" title="Send">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+        <section id="process" class="section section-alt">
+            <div class="container">
+                <h2>How We Work</h2>
+                <div class="steps">
+                    <div>
+                        <h3>1. Discover</h3>
+                        <p>Clarify business objectives, users, and success metrics.</p>
+                    </div>
+                    <div>
+                        <h3>2. Design</h3>
+                        <p>Plan architecture, user flows, and delivery milestones.</p>
+                    </div>
+                    <div>
+                        <h3>3. Build</h3>
+                        <p>Ship in iterative phases with visible progress.</p>
+                    </div>
+                    <div>
+                        <h3>4. Improve</h3>
+                        <p>Measure outcomes, optimize, and support long-term growth.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- macOS Dock -->
-    <div class="macos-dock">
-        <div class="dock-container">
-            <div class="dock-icon" title="Finder">📁</div>
-            <div class="dock-icon" title="Safari">🌐</div>
-            <div class="dock-icon" title="Messages">💬</div>
-            <div class="dock-icon" title="Mail">✉️</div>
-            <div class="dock-icon" title="Photos">📷</div>
-            <div class="dock-icon active" id="terminalDockIcon" title="Terminal">💻</div>
-            <div class="dock-icon active" id="chatDockIcon" title="App AI">🤖</div>
-            <div class="dock-icon" title="Music">🎵</div>
-            <div class="dock-icon" title="Settings">⚙️</div>
-            <div class="dock-separator"></div>
-            <div class="dock-icon" title="Trash">🗑️</div>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>
+                    Have a project in mind? Reach out and we can discuss scope, timeline, and the best
+                    approach for your goals.
+                </p>
+                <form class="contact-form" id="contactForm">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="message">Project Details</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
+                </form>
+                <p class="contact-note">
+                    Business: MyNPco LLC<br>
+                    Website: mynpco.com
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> MyNPco LLC. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
